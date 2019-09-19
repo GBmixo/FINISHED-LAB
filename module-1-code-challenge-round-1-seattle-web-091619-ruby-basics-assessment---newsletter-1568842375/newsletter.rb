@@ -32,12 +32,13 @@ ARTICLES = [
 
 def calculate_recipients
   # TODO (Step 3) - Fix, not working
-  SUBSCRIBERS.each do |address|
+  a = SUBSCRIBERS.each do |address|
     included = UNSUBSCRIBED.include?(address)
     if included == true
       SUBSCRIBERS.delete(address)
     end
   end
+  a
 end
 
 def first_n_articles(number_of_articles)
